@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">CheckBoxes</string>
+    <string name="pizza_extras">Pizza Extras</string>
+    <string name="ex_cheese">Cheese</string>
+    <string name="ex_meat">Meat</string>
+    <string name="ex_tomatoes">Tomatoes</string>
+    <string name="ex_bacon">Bacon</string>
+    <string name="ex_bellpepper">Bell Pepper</string>
+    <string name="ex_thick_crust">Thick Crust</string>
+    <string name="ex_mozzarella">Mozarella</string>
+    <string name="send_order">Send Order</string>
+</resources>

@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Implicit Intents</string>
+    <string name="edit_hintAndroid">http://developer.android.com</string>
+    <string name="btn_openWeb">Open Website</string>
+    <string name="edit_deafMutes">I thought what I\'d do was, I\'d pretend I was one of those deaf-mutes.</string>
+</resources>

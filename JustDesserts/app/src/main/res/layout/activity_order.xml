@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/padding_regular"
+    tools:context="xyz.gitsieg.justdesserts.OrderActivity">
+    
+    <RadioGroup
+        android:id="@+id/order_options"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_regular"
+        android:background="@drawable/delivery_radio_group">
+        
+        <RadioButton
+            android:id="@+id/next_year_delivery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/next_year_delivery"/>
+
+        <RadioButton
+            android:id="@+id/unknown_time_delivery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/maybe_delivery"/>
+
+        <RadioButton
+            android:id="@+id/pickup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/voided_delivery"/>
+    </RadioGroup>
+    
+    <Button
+        android:id="@+id/btn_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/order_options"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="@dimen/padding_regular"
+        android:text="@string/order_now"
+        android:onClick="showPickupOption"/>
+
+</android.support.constraint.ConstraintLayout>

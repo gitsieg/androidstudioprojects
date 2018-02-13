@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Keyboard Samples</string>
+    <string name="txt_show">Show</string>
+    <string name="hint_enter_a_message">Enter a message</string>
+    <string name="hint_password">Enter your password</string>
+    <string name="hint_email">Enter your email address</string>
+    <string name="hint_phone">Enter your phone number</string>
+</resources>

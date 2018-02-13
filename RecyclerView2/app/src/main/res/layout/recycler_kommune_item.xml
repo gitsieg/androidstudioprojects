@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="7dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:text="text"
+        android:id="@+id/kommunenr"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="18dp"
+        android:textAlignment="textStart"
+        android:paddingHorizontal="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/kommunenavn"/>
+
+    <TextView
+        android:text="text"
+        android:textAlignment="center"
+        android:id="@+id/kommunenavn"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="18dp"
+        android:paddingHorizontal="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/kommunenr"
+        app:layout_constraintStart_toEndOf="@id/kommunenr"
+        app:layout_constraintEnd_toStartOf="@id/fylke"/>
+
+    <TextView
+        android:text="text"
+        android:id="@+id/fylke"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="18dp"
+        android:paddingHorizontal="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:textAlignment="textEnd"
+        android:layout_toRightOf="@id/kommunenavn"
+        app:layout_constraintStart_toEndOf="@id/kommunenavn"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>

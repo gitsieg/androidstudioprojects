@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Orderer yes</string>
+    <string name="action_settings">Settings</string>
+    <string name="dog_orderer">This is the orderer</string>
+    <string name="circular_desirable">This is a circular icon which is very desirable</string>
+    <string name="eye_desirable">This is a eye icon which is very desirable</string>
+    <string name="gear_desirable">This is a gear icon which is very desirable</string>
+
+    <string name="circular_order_message">You ordered a circular icon.</string>
+    <string name="eye_order_message">You ordered an eye icon.</string>
+    <string name="gear_order_message">You ordered a gear icon.</string>
+    <string name="next_year_delivery">Sometime by the end of the next year.</string>
+    <string name="maybe_delivery">Maybe now, maybe never</string>
+    <string name="voided_delivery">Pick up in 0.0000001s, or else order is voided delivery.</string>
+    <string name="order_now">Order now</string>
+
+</resources>

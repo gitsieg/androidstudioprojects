@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="defdim">0dp</dimen>
+    <dimen name="options_fragment_width">450dp</dimen>
+    <dimen name="options_fragment_height">150dp</dimen>
+</resources>

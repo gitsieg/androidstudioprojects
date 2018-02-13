@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/something"
+        android:title="@string/eye"
+        android:icon="@drawable/egypt_eye_scaled"
+        app:showAsAction="ifRoom"/>
+    <item android:id="@+id/settings"
+        android:title="@string/settings"
+        android:icon="@drawable/gear_scaled"
+        app:showAsAction="always"/>
+    <item android:id="@+id/reset"
+        android:title="@string/reset"
+        android:icon="@drawable/heart_scaled"
+        app:showAsAction="ifRoom"/>
+
+    <item android:id="@+id/submenu"
+        android:title="@string/sub_menu">
+
+        <menu>
+            <item android:id="@+id/first_item"
+                android:title="@string/first"/>
+            <item android:id="@+id/second_item"
+                android:title="@string/second"/>
+
+        </menu>
+
+    </item>
+</menu>

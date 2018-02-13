@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/items_id"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="xyz.gitsieg.simpleshoppinglist.ItemsActivity">
+
+    <Button
+        android:id="@+id/button_salami"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/def_margin"
+        android:tag="itemButton"
+        android:text="@string/itemButton_cheese" />
+
+    <Button
+        android:id="@+id/button_beer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/def_margin"
+        android:tag="itemButton"
+        android:text="@string/itemButton_beer" />
+
+    <Button
+        android:id="@+id/button_oranges"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/def_margin"
+        android:tag="itemButton"
+        android:text="@string/itemButton_oranges" />
+
+    <Button
+        android:id="@+id/button_juice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/def_margin"
+        android:tag="itemButton"
+        android:text="@string/itemButton_juice" />
+
+    <Button
+        android:id="@+id/button_toiletpaper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/def_margin"
+        android:tag="itemButton"
+        android:text="@string/itemButton_toiletpaper" />
+
+    <Button
+        android:id="@+id/button_milk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/def_margin"
+        android:tag="itemButton"
+        android:text="@string/itemButton_milk" />
+
+</LinearLayout>

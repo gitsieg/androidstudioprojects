@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/def_padding"
+    android:orientation="vertical"
+    tools:context="xyz.gitsieg.checkboxes.MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/pizza_extras"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="@dimen/heading_font_size"/>
+
+    <Button
+        android:onClick="sendPizzaOrder"
+        android:id="@+id/btn_sendOrder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/send_order"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+        <LinearLayout
+            android:id="@+id/linearLayout_chk_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <CheckBox
+
+                android:layout_margin="10dp"
+                android:onClick="onCheckBoxClicked"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ex_cheese"
+                android:padding="@dimen/def_padding"
+                android:textSize="@dimen/chk_ex_font_size"/>
+
+            <CheckBox
+                android:layout_margin="10dp"
+                android:onClick="onCheckBoxClicked"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ex_meat"
+                android:padding="@dimen/def_padding"
+                android:textSize="@dimen/chk_ex_font_size"/>
+
+            <CheckBox
+                android:layout_margin="10dp"
+                android:onClick="onCheckBoxClicked"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ex_tomatoes"
+                android:padding="@dimen/def_padding"
+                android:textSize="@dimen/chk_ex_font_size"/>
+
+            <CheckBox
+                android:layout_margin="10dp"
+                android:onClick="onCheckBoxClicked"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ex_bacon"
+                android:padding="@dimen/def_padding"
+                android:textSize="@dimen/chk_ex_font_size"/>
+
+            <CheckBox
+                android:layout_margin="10dp"
+                android:onClick="onCheckBoxClicked"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ex_bellpepper"
+                android:padding="@dimen/def_padding"
+                android:textSize="@dimen/chk_ex_font_size"/>
+
+            <CheckBox
+                android:layout_margin="10dp"
+                android:onClick="onCheckBoxClicked"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ex_thick_crust"
+                android:padding="@dimen/def_padding"
+                android:textSize="@dimen/chk_ex_font_size"/>
+            <CheckBox
+                android:layout_margin="10dp"
+                android:onClick="onCheckBoxClicked"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ex_mozzarella"
+                android:padding="@dimen/def_padding"
+                android:textSize="@dimen/chk_ex_font_size"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

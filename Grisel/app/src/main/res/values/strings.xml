@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Grisel</string>
+    <string name="sub">−</string>
+    <string name="add">+</string>
+    <string name="life_default_standard">20</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="heading_newLifeTotal">Set new life total for all players:</string>
+    <string name="default_infect">0</string>
+</resources>

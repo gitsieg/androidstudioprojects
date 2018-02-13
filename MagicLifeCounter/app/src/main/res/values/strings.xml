@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MagicLifeCounter</string>
+    <string name="sub">−</string>
+    <string name="add">+</string>
+    <string name="life_default_standard">20</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

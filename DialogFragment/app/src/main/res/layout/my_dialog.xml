@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="150dp"
+    android:minHeight="150dp"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/heading_lifeTotal"
+        android:textStyle="bold"
+        android:textSize="@dimen/deftext"
+        android:text="Set life totals to one of the following values"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn_lifeTotal20"
+        android:text="20"
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/heading_lifeTotal"/>
+
+    <Button
+        android:id="@+id/btn_lifeTotal30"
+        android:text="30"
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/btn_lifeTotal20"
+        android:layout_toRightOf="@id/btn_lifeTotal20"/>
+    <Button
+        android:id="@+id/btn_lifeTotal40"
+        android:text="40"
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/btn_lifeTotal20"
+        android:layout_toRightOf="@id/btn_lifeTotal30"/>
+</RelativeLayout>

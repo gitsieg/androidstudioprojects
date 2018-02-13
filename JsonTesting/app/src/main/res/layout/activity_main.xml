@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    tools:context="xyz.gitsieg.jsontesting.MainActivity">
+
+    <TextView
+        android:id="@+id/label_cardName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Card name:"
+        android:paddingEnd="15dp"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/label_cmc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CMC:"
+        android:textSize="18sp"
+        android:paddingEnd="15dp"
+        android:layout_below="@id/label_cardName"/>
+
+    <TextView
+        android:id="@+id/text_cardName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="------------"
+        android:textSize="18sp"
+        android:layout_toRightOf="@id/label_cardName"
+        android:layout_alignBaseline="@id/label_cardName"/>
+
+    <TextView
+        android:id="@+id/text_cmc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="------cost"
+        android:textSize="18sp"
+        android:layout_toRightOf="@id/label_cmc"
+        android:layout_alignBaseline="@id/label_cmc"/>
+    
+    <ImageView
+        android:id="@+id/cardImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/label_cmc"
+        />
+
+
+
+</RelativeLayout>

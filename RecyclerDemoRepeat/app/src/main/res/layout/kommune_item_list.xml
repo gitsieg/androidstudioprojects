@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/txt_kommuneNavn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stavanger"
+        android:textSize="24dp"
+        android:textColor="@android:color/holo_blue_dark"/>
+
+    <TextView
+        android:id="@+id/lbl_befolkning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/base_county_lbl_style"
+        android:text="Befolkning:"
+        android:layout_below="@id/txt_kommuneNavn"/>
+
+    <TextView
+        android:id="@+id/txt_befolkning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/lbl_befolkning"
+        android:layout_toRightOf="@id/lbl_befolkning"
+        style="@style/item_details"/>
+
+    <TextView
+        android:id="@+id/lbl_fylke"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fylke:"
+        android:textStyle="bold"
+        android:layout_alignBaseline="@id/lbl_befolkning"
+        android:layout_toRightOf="@id/txt_befolkning"/>
+
+    <TextView
+        android:id="@+id/txt_fylke"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rogaland"
+        android:layout_alignBaseline="@id/lbl_befolkning"
+        android:layout_toRightOf="@id/lbl_fylke"
+        android:paddingStart="10dp"
+        android:paddingEnd="60dp"/>
+
+    <TextView
+        android:id="@+id/lbl_ordforer"
+        android:text="Ordfører:"
+        style="@style/base_county_lbl_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lbl_befolkning"/>
+
+    <TextView
+        android:id="@+id/txt_ordfører"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/item_details"
+        android:layout_alignBaseline="@id/lbl_ordforer"
+        android:layout_toRightOf="@id/lbl_ordforer"/>
+
+
+</RelativeLayout>

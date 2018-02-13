@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="xyz.gitsieg.magiclifecounter.MainActivity"
+    android:background="#000">
+    <!-- START Horizontal GuideLines-->
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guide_hSplitTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.07" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guide_hSplitCenter"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.55" />
+    <!-- END Horizontal GuideLines-->
+
+    <!-- START Vertical GuideLines-->
+    <android.support.constraint.Guideline
+        android:id="@+id/guide_vSplitCenter"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guide_vSplitFarWest"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.12" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guide_vSplitWest"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.38" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guide_vSplitFarEast"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.88" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guide_vSplitEast"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.62" />
+
+    <!-- END Vertical GuideLines-->
+
+    <!--TOP BAR VIEWS-->
+    <!--END TOP BAR VIEWS-->
+    <ImageButton
+        android:id="@+id/btn_diceRoll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_optionsFragment"
+        app:layout_constraintBottom_toTopOf="@id/guide_hSplitTop"
+        android:src="@mipmap/mlc_dice_icon_scaled"
+        android:onClick="onButtonDiceRollClicked"
+        android:background="@color/transparent"/>
+
+    <!--WILL BE A FRAGMENT, PLACEHOLDER!-->
+    <Button
+        android:id="@+id/btn_optionsFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="PLACEHOLDER"
+        app:layout_constraintStart_toEndOf="@id/btn_diceRoll"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/guide_hSplitTop"/>
+
+    <!--PLAYER 1 VIEWS-->
+
+
+    <ImageView
+        android:id="@+id/img_player1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        android:translationZ="-1dp"
+        android:src="@mipmap/mlc_dark_swamp_rotated_scaled"
+        app:layout_constraintBottom_toTopOf="@id/guide_hSplitCenter"
+        app:layout_constraintEnd_toStartOf="@id/guide_vSplitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guide_hSplitTop" />
+    
+    <ImageButton
+        android:id="@+id/ibtn_player1_infect"
+        app:layout_constraintStart_toEndOf="@id/text_player1_lifetotal"
+        app:layout_constraintTop_toBottomOf="@id/guide_hSplitTop"
+        app:layout_constraintEnd_toEndOf="@id/guide_vSplitCenter"
+        app:layout_constraintBottom_toTopOf="@id/guide_hSplitCenter"
+        style="@style/PlayersLeftInfect"
+        />
+    
+    <Button
+        android:id="@+id/btn_player1_decrement"
+        android:background="@color/transparent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/sub"
+        style="@style/PlayersLeftSubAdd"
+        app:layout_constraintStart_toEndOf="@id/guide_vSplitFarWest"
+        app:layout_constraintTop_toBottomOf="@id/guide_hSplitTop"
+        app:layout_constraintEnd_toStartOf="@id/guide_vSplitWest"
+        app:layout_constraintBottom_toTopOf="@id/text_player1_lifetotal"/>
+
+    <TextView
+        android:id="@+id/text_player1_lifetotal"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        style="@style/PlayersLeft"
+        android:text="@string/life_default_standard"
+        app:layout_constraintStart_toEndOf="@id/guide_vSplitFarWest"
+        app:layout_constraintTop_toBottomOf="@id/btn_player1_decrement"
+        app:layout_constraintEnd_toStartOf="@id/guide_vSplitWest"
+        app:layout_constraintBottom_toTopOf="@id/btn_player1_increment"
+        />
+
+    <Button
+        android:id="@+id/btn_player1_increment"
+        android:background="@color/transparent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/add"
+        style="@style/PlayersLeftSubAdd"
+        app:layout_constraintStart_toEndOf="@id/guide_vSplitFarWest"
+        app:layout_constraintTop_toBottomOf="@id/text_player1_lifetotal"
+        app:layout_constraintEnd_toStartOf="@id/guide_vSplitWest"
+        app:layout_constraintBottom_toTopOf="@id/guide_hSplitCenter"/>
+
+    <!--PLAYER 2 VIEWS-->
+    <ImageView
+        android:id="@+id/img_player2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        android:translationZ="-1dp"
+        android:src="@mipmap/mlc_volcano_neg_rotated_scaled"
+        app:layout_constraintStart_toEndOf="@id/guide_vSplitCenter"
+        app:layout_constraintTop_toBottomOf="@id/guide_hSplitTop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/guide_hSplitCenter"
+        />
+
+    <ImageButton
+        android:id="@+id/ibtn_player2_infect"
+        app:layout_constraintStart_toEndOf="@id/guide_vSplitCenter"
+        app:layout_constraintTop_toBottomOf="@id/guide_hSplitTop"
+        app:layout_constraintEnd_toStartOf="@id/text_player2_lifetotal"
+        app:layout_constraintBottom_toTopOf="@id/guide_hSplitCenter"
+        style="@style/PlayersRightInfect"
+        android:onClick="playerInfect"/>
+
+    <Button
+        android:id="@+id/btn_player2_decrement"
+        android:background="@color/transparent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/add"
+        style="@style/PlayersRightSubAdd"
+        app:layout_constraintStart_toEndOf="@id/guide_vSplitEast"
+        app:layout_constraintTop_toBottomOf="@id/guide_hSplitTop"
+        app:layout_constraintEnd_toStartOf="@id/guide_vSplitFarEast"
+        app:layout_constraintBottom_toTopOf="@id/text_player2_lifetotal"/>
+
+    <TextView
+        android:id="@+id/text_player2_lifetotal"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        style="@style/PlayersRight"
+        android:text="@string/life_default_standard"
+        app:layout_constraintStart_toEndOf="@id/guide_vSplitEast"
+        app:layout_constraintTop_toBottomOf="@id/btn_player2_decrement"
+        app:layout_constraintEnd_toStartOf="@id/guide_vSplitFarEast"
+        app:layout_constraintBottom_toTopOf="@id/btn_player2_increment"
+        />
+
+    <Button
+        android:id="@+id/btn_player2_increment"
+        android:background="@color/transparent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/sub"
+        style="@style/PlayersRightSubAdd"
+        app:layout_constraintStart_toEndOf="@id/guide_vSplitEast"
+        app:layout_constraintTop_toBottomOf="@id/text_player2_lifetotal"
+        app:layout_constraintEnd_toStartOf="@id/guide_vSplitFarEast"
+        app:layout_constraintBottom_toTopOf="@id/guide_hSplitCenter"/>
+
+
+
+    <!--PLAYER 3 VIEWS-->
+    <ImageButton
+        android:id="@+id/ibtn_player3_infect"
+        app:layout_constraintStart_toEndOf="@id/text_player3_lifetotal"
+        app:layout_constraintTop_toBottomOf="@id/guide_hSplitCenter"
+        app:layout_constraintEnd_toStartOf="@id/guide_vSplitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        style="@style/PlayersLeftInfect"/>
+
+    <ImageView
+        android:id="@+id/img_player3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        android:translationZ="-1dp"
+        android:src="@mipmap/mlc_forest_neg_rotated_scaled"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guide_hSplitCenter"
+        app:layout_constraintEnd_toStartOf="@id/guide_vSplitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <Button
+        android:id="@+id/btn_player3_decrement"
+        android:background="@color/transparent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/sub"
+        style="@style/PlayersLeftSubAdd"
+        app:layout_constraintStart_toEndOf="@id/guide_vSplitFarWest"
+        app:layout_constraintTop_toBottomOf="@id/guide_hSplitCenter"
+        app:layout_constraintEnd_toStartOf="@id/guide_vSplitWest"
+        app:layout_constraintBottom_toTopOf="@id/text_player3_lifetotal"
+/>
+
+    <TextView
+        android:id="@+id/text_player3_lifetotal"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        style="@style/PlayersLeft"
+        android:text="@string/life_default_standard"
+        app:layout_constraintStart_toEndOf="@id/guide_vSplitFarWest"
+        app:layout_constraintTop_toBottomOf="@id/btn_player3_decrement"
+        app:layout_constraintEnd_toStartOf="@id/guide_vSplitWest"
+        app:layout_constraintBottom_toTopOf="@id/btn_player3_increment"
+        />
+
+    <Button
+        android:id="@+id/btn_player3_increment"
+        android:background="@color/transparent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/add"
+        style="@style/PlayersLeftSubAdd"
+        app:layout_constraintStart_toEndOf="@id/guide_vSplitFarWest"
+        app:layout_constraintTop_toBottomOf="@id/text_player3_lifetotal"
+        app:layout_constraintEnd_toStartOf="@id/guide_vSplitWest"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <!--PLAYER 4 VIEWS-->
+    <ImageView
+        android:id="@+id/img_player4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        android:translationZ="-1dp"
+        android:src="@mipmap/mlc_deepwater_rotated_scaled"
+        app:layout_constraintStart_toEndOf="@id/guide_vSplitCenter"
+        app:layout_constraintTop_toBottomOf="@id/guide_hSplitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        />
+
+    <ImageButton
+        android:id="@+id/ibtn_player4_infect"
+        app:layout_constraintStart_toEndOf="@id/guide_vSplitCenter"
+        app:layout_constraintTop_toBottomOf="@id/guide_hSplitCenter"
+        app:layout_constraintEnd_toStartOf="@id/text_player4_lifetotal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        style="@style/PlayersRightInfect"/>
+
+    <Button
+        android:id="@+id/btn_player4_decrement"
+        android:background="@color/transparent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/add"
+        style="@style/PlayersRightSubAdd"
+        app:layout_constraintStart_toEndOf="@id/guide_vSplitEast"
+        app:layout_constraintTop_toBottomOf="@id/guide_hSplitCenter"
+        app:layout_constraintEnd_toStartOf="@id/guide_vSplitFarEast"
+        app:layout_constraintBottom_toTopOf="@id/text_player4_lifetotal"/>
+
+    <TextView
+        android:id="@+id/text_player4_lifetotal"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        style="@style/PlayersRight"
+        android:text="@string/life_default_standard"
+        app:layout_constraintStart_toEndOf="@id/guide_vSplitEast"
+        app:layout_constraintTop_toBottomOf="@id/btn_player4_decrement"
+        app:layout_constraintEnd_toStartOf="@id/guide_vSplitFarEast"
+        app:layout_constraintBottom_toTopOf="@id/btn_player4_increment"/>
+
+    <Button
+        android:id="@+id/btn_player4_increment"
+        android:background="@color/transparent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/sub"
+        style="@style/PlayersRightSubAdd"
+        app:layout_constraintStart_toEndOf="@id/guide_vSplitEast"
+        app:layout_constraintTop_toBottomOf="@id/text_player4_lifetotal"
+        app:layout_constraintEnd_toStartOf="@id/guide_vSplitFarEast"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+</android.support.constraint.ConstraintLayout>

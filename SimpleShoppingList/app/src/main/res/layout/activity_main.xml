@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_id"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="xyz.gitsieg.simpleshoppinglist.MainActivity">
+
+    <TextView
+        android:tag="shop_list"
+        android:id="@+id/main_itemList0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:visibility="invisible" />
+
+    <TextView
+        android:tag="shop_list"
+        android:id="@+id/main_itemList1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:visibility="invisible" />
+    <TextView
+        android:tag="shop_list"
+        android:id="@+id/main_itemList2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:visibility="invisible" />
+    <TextView
+        android:tag="shop_list"
+        android:id="@+id/main_itemList3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:visibility="invisible" />
+    <TextView
+        android:tag="shop_list"
+        android:id="@+id/main_itemList4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:visibility="invisible" />
+    <TextView
+        android:tag="shop_list"
+        android:id="@+id/main_itemList5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:visibility="invisible" />
+    <TextView
+        android:tag="shop_list"
+        android:id="@+id/main_itemList6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:visibility="invisible" />
+    <TextView
+        android:tag="shop_list"
+        android:id="@+id/main_itemList7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:visibility="invisible" />
+    <TextView
+        android:id="@+id/main_itemList8"
+        android:tag="shop_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:visibility="invisible" />
+    <TextView
+        android:id="@+id/main_itemList9"
+        android:tag="shop_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:visibility="invisible" />
+
+
+
+    <Button
+        android:id="@+id/button_addItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_margin="@dimen/def_margin"
+        android:text="@string/button_addItem"
+        tools:ignore="RtlHardcoded"
+        android:onClick="addItems"/>
+
+
+</LinearLayout>

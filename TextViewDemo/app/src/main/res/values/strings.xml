@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">TextViewDemo</string>
+    <string name="article_title">Made Up Title</string>
+    <string name="article_subtitle">Made Up Subtitle In Talks With Russia</string>
+    <string name="article_text">
+        This here is gotten from a place www.rockument.com\n\n
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+        \n\n
+        <b>Typical things:</b>
+        Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus.\n\n Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+        \n\n
+        Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+        \n\n
+        <b>Typical things:</b>
+        Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.
+        \n\n\
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+        \n\n
+        <b>Typical things:</b>
+        Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus.\n\n Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+        \n\n
+        Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+        \n\n
+        Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.
+        <b>Typical things:</b>
+        Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus.\n\n Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+        \n\n
+        Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+        \n\n
+        <b>Typical things:</b>
+        Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.
+        \n\n\
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+        \n\n
+        <b>Typical things:</b>
+        Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus.\n\n Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+        \n\n
+        Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+        \n\n
+        Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.
+    </string>
+</resources>

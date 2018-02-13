@@ -1,0 +1,20 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context="xyz.gitsieg.magiccardbrowser.gui_pkg.CardViewFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/cardViewHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:paddingStart="5dp"
+        android:paddingVertical="2dp"
+        android:textAlignment="center"
+        android:text="@string/click_on_a_result_to_see_card_details" />
+
+</RelativeLayout>

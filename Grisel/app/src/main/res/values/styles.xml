@@ -1,0 +1,56 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- All players-->
+    <style name="PlayersStyle">
+        <item name="android:padding">10sp</item>
+        <item name="android:textSize">65sp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">#FFF</item>
+    </style>
+
+    <!-- For players on left side of screen -->
+    <style name="PlayersLeft" parent="PlayersStyle">
+        <item name="android:rotation">90</item>
+    </style>
+    <style name="PlayersLeftSubAdd" parent="PlayersLeft">
+        <item name="android:textSize">30sp</item>
+    </style>
+    <style name="PlayersLeftInfect">
+        <item name="android:background">@color/transparent</item>
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:rotation">90</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:src">@mipmap/infect_alpha</item>
+    </style>
+
+
+    <!-- For players on right side of screen -->
+    <style name="PlayersRight" parent="PlayersStyle">
+        <item name="android:rotation">-90</item>
+    </style>
+    <style name="PlayersRightSubAdd" parent="PlayersRight">
+        <item name="android:textSize">30sp</item>
+    </style>
+    <style name="PlayersRightInfect" parent="PlayersLeftInfect">
+        <item name="android:rotation">-90</item>
+    </style>
+
+    <style name="InfectCounter">
+        <item name="android:background">@color/transparent</item>
+        <item name="android:textColor">#FFF</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:rotation">90</item>
+
+    </style>
+
+</resources>

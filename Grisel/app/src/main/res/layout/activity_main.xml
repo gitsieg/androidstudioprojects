@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="xyz.gitsieg.grisel.MainActivity"
+    android:background="#000">
+
+    <!-- START Horizontal GuideLines-->
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guide_hSplitTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.07" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guide_hSplitCenter"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.55" />
+    <!-- END Horizontal GuideLines-->
+
+    <!-- START Vertical GuideLines-->
+    <android.support.constraint.Guideline
+        android:id="@+id/guide_vSplitCenter"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guide_vSplitFarWest"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.12" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guide_vSplitWest"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.38" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guide_vSplitFarEast"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.88" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guide_vSplitEast"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.62" />
+
+    <!-- END Vertical GuideLines-->
+
+    <!--TOP BAR VIEWS-->
+    <!--END TOP BAR VIEWS-->
+    <ImageButton
+        android:onClick="rollDice"
+        android:id="@+id/btn_diceRoll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_optionsFragment"
+        app:layout_constraintBottom_toTopOf="@id/guide_hSplitTop"
+        android:src="@mipmap/cube"
+        android:scaleType="centerInside"
+        android:background="@color/transparent"/>
+
+    <!--Opens optionsfragment-->
+    <ImageButton
+        android:id="@+id/btn_optionsFragment"
+        android:layout_width="@dimen/defdim"
+        android:layout_height="0dp"
+        android:src="@mipmap/heartsetting"
+        app:layout_constraintStart_toEndOf="@id/btn_diceRoll"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/guide_hSplitTop"
+        android:background="@color/transparent"
+        android:scaleType="centerInside"
+        android:onClick="openOptionsFragment"/>
+
+    <!--PLAYER 1 VIEWS-->
+
+    <ImageView
+        android:id="@+id/img_player1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        android:translationZ="-1dp"
+        android:src="@mipmap/mlc_dark_swamp_rotated_scaled"
+        app:layout_constraintBottom_toTopOf="@id/guide_hSplitCenter"
+        app:layout_constraintEnd_toStartOf="@id/guide_vSplitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guide_hSplitTop" />
+
+    <ImageButton
+        android:id="@+id/ibtn_player1_infect"
+        style="@style/PlayersLeftInfect"
+        android:background="@drawable/ibtn_rounded_corners_infect"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toStartOf="@id/guide_vSplitCenter"
+        app:layout_constraintTop_toBottomOf="@id/guide_hSplitTop"/>
+
+    <!--LAYOUT INFECT OVERLAY PLAYER1-->
+    <RelativeLayout
+        android:id="@+id/player1_infect_data"
+        android:visibility="invisible"
+        android:layout_width="49dp"
+        android:layout_height="130dp"
+        app:layout_constraintTop_toBottomOf="@id/ibtn_player1_infect"
+        app:layout_constraintEnd_toStartOf="@id/guide_vSplitCenter"
+        android:background="@drawable/rounded_corners_infect_counter"
+        android:layout_marginRight="10dp">
+
+        <Button
+            android:id="@+id/btn_player1_infect_decrement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:text="@string/sub"
+            style="@style/InfectCounter"
+            android:onClick="onInfectCounterClicked"/>
+
+        <TextView
+            android:id="@+id/text_player1_infect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/default_infect"
+            style="@style/InfectCounter"
+            android:layout_below="@id/btn_player1_infect_decrement"
+            />
+
+        <Button
+            android:id="@+id/btn_player1_infect_increment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_player1_infect"
+            style="@style/InfectCounter"
+            android:text="@string/add"
+            android:onClick="onInfectCounterClicked"/>
+    </RelativeLayout>
+    <!-- END LAYOUT INFECT OVERLAY PLAYER1-->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    
+    <Button
+        android:id="@+id/btn_player1_decrement"
+        android:background="@color/transparent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/sub"
+        style="@style/PlayersLeftSubAdd"
+        android:onClick="onLifeCounterClicked"
+        app:layout_constraintStart_toEndOf="@id/guide_vSplitFarWest"
+        app:layout_constraintTop_toBottomOf="@id/guide_hSplitTop"
+        app:layout_constraintEnd_toStartOf="@id/guide_vSplitWest"
+        app:layout_constraintBottom_toTopOf="@id/text_player1_lifetotal"/>
+
+    <TextView
+        android:id="@+id/text_player1_lifetotal"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        style="@style/PlayersLeft"
+        android:text="@string/life_default_standard"
+        app:layout_constraintStart_toEndOf="@id/guide_vSplitFarWest"
+        app:layout_constraintTop_toBottomOf="@id/btn_player1_decrement"
+        app:layout_constraintEnd_toStartOf="@id/guide_vSplitWest"
+        app:layout_constraintBottom_toTopOf="@id/btn_player1_increment"
+        />
+
+    <Button
+        android:id="@+id/btn_player1_increment"
+        android:background="@color/transparent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/add"
+        style="@style/PlayersLeftSubAdd"
+        android:onClick="onLifeCounterClicked"
+        app:layout_constraintStart_toEndOf="@id/guide_vSplitFarWest"
+        app:layout_constraintTop_toBottomOf="@id/text_player1_lifetotal"
+        app:layout_constraintEnd_toStartOf="@id/guide_vSplitWest"
+        app:layout_constraintBottom_toTopOf="@id/guide_hSplitCenter"/>
+    
+    <!--PLAYER 2 VIEWS-->
+    <ImageView
+        android:id="@+id/img_player2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        android:translationZ="-1dp"
+        android:src="@mipmap/mlc_volcano_neg_rotated_scaled"
+        app:layout_constraintStart_toEndOf="@id/guide_vSplitCenter"
+        app:layout_constraintTop_toBottomOf="@id/guide_hSplitTop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/guide_hSplitCenter"
+        />
+
+    <ImageButton
+        android:id="@+id/ibtn_player2_infect"
+        style="@style/PlayersRightInfect"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/ibtn_rounded_corners_infect"
+        app:layout_constraintStart_toEndOf="@id/guide_vSplitCenter"
+        app:layout_constraintBottom_toTopOf="@id/guide_hSplitCenter"/>
+
+    <!--LAYOUT INFECT OVERLAY PLAYER2-->
+    <RelativeLayout
+        android:id="@+id/player2_infect_data"
+        android:visibility="invisible"
+        android:layout_width="49dp"
+        android:layout_height="130dp"
+        app:layout_constraintStart_toEndOf="@id/guide_vSplitCenter"
+        app:layout_constraintBottom_toTopOf="@id/ibtn_player2_infect"
+        android:background="@drawable/rounded_corners_infect_counter"
+        android:rotation="180"
+        android:layout_marginLeft="10dp">
+
+        <Button
+            android:id="@+id/btn_player2_infect_decrement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sub"
+            style="@style/InfectCounter"
+            android:onClick="onInfectCounterClicked"/>
+
+        <TextView
+            android:id="@+id/text_player2_infect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/default_infect"
+            style="@style/InfectCounter"
+            android:layout_below="@id/btn_player2_infect_decrement"
+            />
+
+        <Button
+            android:id="@+id/btn_player2_infect_increment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_player2_infect"
+            style="@style/InfectCounter"
+            android:text="@string/add"
+            android:onClick="onInfectCounterClicked"/>
+    </RelativeLayout>
+    <!-- END LAYOUT INFECT OVERLAY PLAYER2-->
+
+    <Button
+        android:id="@+id/btn_player2_increment"
+        android:background="@color/transparent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/add"
+        style="@style/PlayersRightSubAdd"
+        android:onClick="onLifeCounterClicked"
+        app:layout_constraintStart_toEndOf="@id/guide_vSplitEast"
+        app:layout_constraintTop_toBottomOf="@id/guide_hSplitTop"
+        app:layout_constraintEnd_toStartOf="@id/guide_vSplitFarEast"
+        app:layout_constraintBottom_toTopOf="@id/text_player2_lifetotal"/>
+
+    <TextView
+        android:id="@+id/text_player2_lifetotal"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        style="@style/PlayersRight"
+        android:text="@string/life_default_standard"
+        app:layout_constraintStart_toEndOf="@id/guide_vSplitEast"
+        app:layout_constraintTop_toBottomOf="@id/btn_player2_increment"
+        app:layout_constraintEnd_toStartOf="@id/guide_vSplitFarEast"
+        app:layout_constraintBottom_toTopOf="@id/btn_player2_decrement"
+        />
+
+    <Button
+        android:id="@+id/btn_player2_decrement"
+        android:background="@color/transparent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/sub"
+        style="@style/PlayersRightSubAdd"
+        android:onClick="onLifeCounterClicked"
+        app:layout_constraintStart_toEndOf="@id/guide_vSplitEast"
+        app:layout_constraintTop_toBottomOf="@id/text_player2_lifetotal"
+        app:layout_constraintEnd_toStartOf="@id/guide_vSplitFarEast"
+        app:layout_constraintBottom_toTopOf="@id/guide_hSplitCenter"/>
+
+
+
+    <!--PLAYER 3 VIEWS-->
+    <ImageButton
+        android:id="@+id/ibtn_player3_infect"
+        style="@style/PlayersLeftInfect"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/ibtn_rounded_corners_infect"
+        app:layout_constraintEnd_toStartOf="@id/guide_vSplitCenter"
+        app:layout_constraintTop_toBottomOf="@id/guide_hSplitCenter" />
+
+    <!-- LAYOUT INFECT OVERLAY PLAYER 3-->
+    <RelativeLayout
+        android:id="@+id/player3_infect_data"
+        android:visibility="invisible"
+        android:layout_width="49dp"
+        android:layout_height="130dp"
+        app:layout_constraintTop_toBottomOf="@id/ibtn_player3_infect"
+        app:layout_constraintEnd_toStartOf="@id/guide_vSplitCenter"
+        android:background="@drawable/rounded_corners_infect_counter"
+        android:layout_marginRight="10dp">
+
+        <Button
+            android:id="@+id/btn_player3_infect_decrement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/InfectCounter"
+            android:text="@string/sub"
+            android:onClick="onInfectCounterClicked"/>
+        
+        <TextView
+            android:id="@+id/text_player3_infect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/InfectCounter"
+            android:text="@string/default_infect"
+            android:layout_below="@id/btn_player3_infect_decrement"
+            />
+
+        <Button
+            android:id="@+id/btn_player3_infect_increment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_player3_infect"
+            android:text="@string/add"
+            style="@style/InfectCounter"
+            android:onClick="onInfectCounterClicked"/>
+    </RelativeLayout>
+
+    <!-- END LAYOUT INFECT OVERLAY PLAYER 3-->
+
+    <ImageView
+        android:id="@+id/img_player3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/mlc_deepwater_rotated_scaled"
+        android:translationZ="-1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guide_vSplitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guide_hSplitCenter" />
+
+    <Button
+        android:id="@+id/btn_player3_decrement"
+        android:background="@color/transparent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/sub"
+        style="@style/PlayersLeftSubAdd"
+        android:onClick="onLifeCounterClicked"
+        app:layout_constraintStart_toEndOf="@id/guide_vSplitFarWest"
+        app:layout_constraintTop_toBottomOf="@id/guide_hSplitCenter"
+        app:layout_constraintEnd_toStartOf="@id/guide_vSplitWest"
+        app:layout_constraintBottom_toTopOf="@id/text_player3_lifetotal"
+        />
+
+    <TextView
+        android:id="@+id/text_player3_lifetotal"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        style="@style/PlayersLeft"
+        android:text="@string/life_default_standard"
+        app:layout_constraintStart_toEndOf="@id/guide_vSplitFarWest"
+        app:layout_constraintTop_toBottomOf="@id/btn_player3_decrement"
+        app:layout_constraintEnd_toStartOf="@id/guide_vSplitWest"
+        app:layout_constraintBottom_toTopOf="@id/btn_player3_increment"
+        />
+
+    <Button
+        android:id="@+id/btn_player3_increment"
+        android:background="@color/transparent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/add"
+        style="@style/PlayersLeftSubAdd"
+        android:onClick="onLifeCounterClicked"
+        app:layout_constraintStart_toEndOf="@id/guide_vSplitFarWest"
+        app:layout_constraintTop_toBottomOf="@id/text_player3_lifetotal"
+        app:layout_constraintEnd_toStartOf="@id/guide_vSplitWest"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <!--PLAYER 4 VIEWS-->
+    <ImageView
+        android:id="@+id/img_player4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        android:translationZ="-1dp"
+        android:src="@mipmap/mlc_forest_neg_rotated_scaled"
+        app:layout_constraintStart_toEndOf="@id/guide_vSplitCenter"
+        app:layout_constraintTop_toBottomOf="@id/guide_hSplitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <ImageButton
+        android:id="@+id/ibtn_player4_infect"
+        style="@style/PlayersRightInfect"
+        android:background="@drawable/ibtn_rounded_corners_infect"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@id/guide_vSplitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <!--LAYOUT INFECT OVERLAY PLAYER 4-->
+    <RelativeLayout
+        android:id="@+id/player4_infect_data"
+        android:visibility="invisible"
+        android:layout_width="49dp"
+        android:layout_height="130dp"
+        app:layout_constraintStart_toEndOf="@id/guide_vSplitCenter"
+        app:layout_constraintBottom_toTopOf="@id/ibtn_player4_infect"
+        android:background="@drawable/rounded_corners_infect_counter"
+        android:rotation="180"
+        android:layout_marginLeft="10dp">
+
+        <Button
+            android:id="@+id/btn_player4_infect_decrement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:text="@string/sub"
+            style="@style/InfectCounter"
+            android:onClick="onInfectCounterClicked"/>
+
+        <TextView
+            android:id="@+id/text_player4_infect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/default_infect"
+            style="@style/InfectCounter"
+            android:layout_below="@id/btn_player4_infect_decrement"
+            />
+
+        <Button
+            android:id="@+id/btn_player4_infect_increment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_player4_infect"
+            style="@style/InfectCounter"
+            android:text="@string/add"
+            android:onClick="onInfectCounterClicked"/>
+    </RelativeLayout>
+    <!-- END LAYOUT INFECT OVERLAY PLAYER2-->
+
+    <Button
+        android:id="@+id/btn_player4_increment"
+        android:background="@color/transparent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/add"
+        style="@style/PlayersRightSubAdd"
+        android:onClick="onLifeCounterClicked"
+        app:layout_constraintStart_toEndOf="@id/guide_vSplitEast"
+        app:layout_constraintTop_toBottomOf="@id/guide_hSplitCenter"
+        app:layout_constraintEnd_toStartOf="@id/guide_vSplitFarEast"
+        app:layout_constraintBottom_toTopOf="@id/text_player4_lifetotal"/>
+
+    <TextView
+        android:id="@+id/text_player4_lifetotal"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        style="@style/PlayersRight"
+        android:text="@string/life_default_standard"
+        app:layout_constraintStart_toEndOf="@id/guide_vSplitEast"
+        app:layout_constraintTop_toBottomOf="@id/btn_player4_increment"
+        app:layout_constraintEnd_toStartOf="@id/guide_vSplitFarEast"
+        app:layout_constraintBottom_toTopOf="@id/btn_player4_decrement"/>
+
+    <Button
+        android:id="@+id/btn_player4_decrement"
+        android:background="@color/transparent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/sub"
+        style="@style/PlayersRightSubAdd"
+        android:onClick="onLifeCounterClicked"
+        app:layout_constraintStart_toEndOf="@id/guide_vSplitEast"
+        app:layout_constraintTop_toBottomOf="@id/text_player4_lifetotal"
+        app:layout_constraintEnd_toStartOf="@id/guide_vSplitFarEast"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+</android.support.constraint.ConstraintLayout>

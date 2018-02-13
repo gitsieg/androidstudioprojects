@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MenusDemo</string>
+    <string name="eye">Eye</string>
+    <string name="settings">Settings</string>
+    <string name="sub_menu">Sub menu</string>
+    <string name="reset">Reset</string>
+    <string name="first">First</string>
+    <string name="second">Second</string>
+</resources>

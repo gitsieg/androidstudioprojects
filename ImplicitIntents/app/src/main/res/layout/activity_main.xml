@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10sp"
+    tools:context="xyz.gitsieg.implicitintents.MainActivity">
+
+    <EditText
+        android:id="@+id/edit_webBrowser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/edit_hintAndroid"/>
+
+    <Button
+        android:id="@+id/btn_openWebsite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_openWeb"
+        android:onClick="openWebsite"/>
+
+    <EditText
+        android:id="@+id/edit_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Golden Gate Bridge" />
+
+    <Button
+        android:id="@+id/btn_openLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Open Location"
+        android:onClick="openLocation"/>
+
+    <EditText
+        android:id="@+id/edit_share"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/edit_deafMutes"/>
+
+    <Button
+        android:id="@+id/btn_openShareContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Share This text"
+        android:onClick="shareText"/>
+
+</LinearLayout>

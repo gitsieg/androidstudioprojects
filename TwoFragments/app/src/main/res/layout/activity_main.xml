@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    tools:context="xyz.gitsieg.twofragments.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Two Fragments Demo"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/btn_fragmentOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fragment One"
+            android:onClick="changeFragment"/>
+
+        <Button
+            android:id="@+id/btn_fragmentTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fragment Two"
+            android:onClick="changeFragment"/>
+        
+        <RelativeLayout
+            android:layout_margin="10dp"
+            android:id="@+id/containsFragments"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <fragment
+                android:name="xyz.gitsieg.twofragments.FragmentOne"
+                android:id="@+id/fragmentContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </fragment>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

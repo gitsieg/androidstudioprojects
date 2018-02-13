@@ -1,0 +1,56 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="xyz.gitsieg.grisel.OptionsFragment"
+    android:padding="15dp"
+    android:background="#333333">
+    
+    <TextView
+        android:id="@+id/optfrag_headingLifeTotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/heading_newLifeTotal"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="#eee"/>
+
+    <Button
+        android:layout_margin="10dp"
+        android:id="@+id/btn_lifeTotal20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/optfrag_headingLifeTotal"
+        android:text="20"
+        android:textSize="20sp"
+        android:textColor="#eeee"
+        android:background="@color/transparent"/>
+
+    <Button
+        android:layout_margin="10dp"
+        android:id="@+id/btn_lifeTotal30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/btn_lifeTotal20"
+        android:layout_toRightOf="@id/btn_lifeTotal20"
+        android:text="30"
+        android:textSize="20sp"
+        android:textColor="#eeee"
+        android:background="@color/transparent"/>
+
+
+    <Button
+        android:layout_margin="10dp"
+        android:id="@+id/btn_lifeTotal40"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/btn_lifeTotal20"
+        android:layout_toRightOf="@id/btn_lifeTotal30"
+        android:text="40"
+        android:textSize="20sp"
+        android:textColor="#eeee"
+        android:background="@color/transparent"/>
+
+
+
+</RelativeLayout>

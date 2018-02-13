@@ -1,0 +1,41 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="xyz.gitsieg.magiclifecounter.OptionsFragment"
+    android:padding="20dp">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/frag_textview_lifetotalHeading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pick a life total for all players"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_margin="10dp"/>
+
+    <Button
+        android:id="@+id/btn_lifeTotal20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/frag_textview_lifetotalHeading"
+        android:text="20"/>
+
+    <Button
+        android:id="@+id/btn_lifeTotal30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/btn_lifeTotal20"
+        android:layout_below="@id/frag_textview_lifetotalHeading"
+        android:text="30"/>
+
+    <Button
+        android:id="@+id/btn_lifeTotal40"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/btn_lifeTotal30"
+        android:layout_below="@id/frag_textview_lifetotalHeading"
+        android:text="40"/>
+
+</RelativeLayout>

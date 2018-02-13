@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Phone Number Spinner</string>
+    <string name="phone_number">Phone number:</string>
+    <string name="nothing_entered">Nothing entered</string>
+    <string name="show">Show</string>
+    <string name="nothing_selected">onNothingSelect</string>
+
+    <string-array name="labels_array">
+        <item>Home</item>
+        <item>Work</item>
+        <item>Mobile</item>
+        <item>Other</item>
+    </string-array>
+</resources>

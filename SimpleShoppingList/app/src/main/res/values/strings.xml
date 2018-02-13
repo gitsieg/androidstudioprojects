@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">SimpleShoppingList</string>
+    <string name="button_addItem">Add item</string>
+    <string name="itemButton_cheese">Cheese</string>
+    <string name="itemButton_juice">Juice</string>
+    <string name="itemButton_oranges">Oranges</string>
+    <string name="itemButton_beer">Beer</string>
+    <string name="itemButton_salami">Salami</string>
+    <string name="itemButton_toiletpaper">Toiletpaper</string>
+    <string name="itemButton_milk">Milk</string>
+    <string name="itemButton_snus">Snus</string>
+    <string name="itemButton_bread">Bread</string>
+    <string name="itemButton_meat">Meat</string>
+</resources>

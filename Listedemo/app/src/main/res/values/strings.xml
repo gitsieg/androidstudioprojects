@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">ListeDemo</string>
+    <string name="action_settings">Settings</string>
+
+    <string-array name="norske_fylker">
+        <item>Akershus</item>
+        <item>Aust-Agder</item>
+        <item>Buskerud</item>
+        <item>Finnmark</item>
+        <item>Hedmark</item>
+        <item>Hordaland</item>
+        <item>Møre og Romsdal</item>
+        <item>Nordland</item>
+        <item>Oppland</item>
+        <item>Oslo</item>
+        <item>Rogaland</item>
+        <item>Sogn og Fjordane</item>
+        <item>Telemark</item>
+        <item>Troms</item>
+        <item>Trøndelag</item>
+        <item>Vest-Agder</item>
+        <item>Vestfold</item>
+        <item>Østfold</item>
+    </string-array>
+
+</resources>

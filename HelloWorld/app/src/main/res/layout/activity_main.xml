@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/rootLayout"
+    tools:context="xyz.gitsieg.helloworld.MainActivity">
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        
+        <RadioButton
+            android:id="@+id/radioJA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ja"/>
+
+        <RadioButton
+            android:id="@+id/radioTJA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tja"/>
+
+        <RadioButton
+            android:id="@+id/radioNEI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nei"/>
+
+    </RadioGroup>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OK"
+        android:onClick="isChecked"/>
+    
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/textlayout_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <Spinner
+            android:id="@+id/spin_number_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/edit_tlfNr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Skriv telefonnummer"
+            android:text="Name" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/click_me_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click me"/>
+
+
+    <EditText
+        android:id="@+id/text_dato"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Velg dato"/>
+
+
+
+</LinearLayout>
